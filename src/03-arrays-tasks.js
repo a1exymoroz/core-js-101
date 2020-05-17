@@ -267,8 +267,7 @@ function getSecondItems(arr) {
 function propagateItemsByPositionIndex(arr) {
   return arr.reduce((acu, cur, index) => {
     const arrValue = new Array(index + 1).fill(cur);
-    acu = [...acu, ...arrValue];
-    return acu;
+    return [...acu, ...arrValue];
   }, []);
 }
 /**

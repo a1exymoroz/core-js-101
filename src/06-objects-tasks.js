@@ -120,10 +120,11 @@ class CSSSelectorBuilder {
   }
 
   check(newOrder) {
-    if (newOrder < this.orderNumber)
+    if (newOrder < this.orderNumber) {
       throw new Error(
         'Selector parts should be arranged in the following order: element, id, class, attribute, pseudo-class, pseudo-element',
       );
+    }
     this.orderNumber = newOrder;
   }
 
